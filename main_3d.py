@@ -50,14 +50,14 @@ def iterate_minibatch(data, batch_size, shuffle=True):
 
 
 def create_dummy_data():
-    """Create small cardiac data based on patches for demo.
+    """Create small lungs data based on patches for demo.
 
     Note that in practice, at test time the method will need to be applied to
     the whole volume. In addition, one would need more data to prevent
     overfitting.
 
     """
-    data = loadmat(join(project_root, './data/cardiac.mat'))['seq']
+    data = loadmat(join(project_root, './data/lungs.mat'))['seq']
     nx, ny, nt = data.shape
     ny_red = 8
     sl = ny//ny_red
